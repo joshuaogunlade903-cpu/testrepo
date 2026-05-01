@@ -3,7 +3,6 @@ const {DOM,APP,ZNativeImport,$bind} = Zenith
 
 Zenith.setGlobal({$bind})
 
-const temp=ZNativeImport('main')
-alert(temp.root.innerHTML)
+fetch("templates/main.znt.n.xml").then(e=>e.text().then(console.log))
 //alert("hello")
 //temp.runIn(DOM.body)
