@@ -4,6 +4,6 @@ const {DOM,APP,ZNativeImport,$bind} = Zenith
 Zenith.setGlobal({$bind})
 
 const temp=ZNativeImport('main')
-alert(temp.html)
+alert(temp.root.innerHTML)
 //alert("hello")
 //temp.runIn(DOM.body)
