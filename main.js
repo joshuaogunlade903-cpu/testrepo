@@ -3,8 +3,7 @@ const {DOM,APP,ZNativeImport,$bind} = Zenith
 
 Zenith.setGlobal({$bind})
 
-fetch("templates/main.znt.n.xml").then(e=>e.text().then(f=>{
- Zenith.ZNativeFrom(f).runIn(DOM.body)
-}))
-//alert("hello")
-//temp.runIn(DOM.body)
+Zenith.Flex.$serialize(async ()=>{
+ const mainT=await ZNativeImport("main")
+ mainT.runIn(DOM.body)
+})
