@@ -5,7 +5,6 @@ Zenith.setGlobal({$bind})
 
 fetch("templates/main.znt.n.xml").then(e=>e.text().then(f=>{
  Zenith.ZNativeFrom(f).runIn(DOM.body)
- alert(f)
 }))
 //alert("hello")
 //temp.runIn(DOM.body)
