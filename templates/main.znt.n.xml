@@ -1,0 +1,12 @@
+<TH1>Simple Counter</TH1>
+
+<TH3>Count: {{count}}</TH3>
+
+<button onclick={[ template.data.count.value++ ]}>Increase</button>
+
+<JS>
+template.afterLoad=()=>{
+  template.data.count=Z.$bind("count")
+  template.data.count.value=0
+}
+</JS>
